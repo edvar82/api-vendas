@@ -1,5 +1,5 @@
 Arguments: 
-  D:\NodeJS\node.exe C:\Users\edvar\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D @types/join
+  D:\NodeJS\node.exe C:\Users\edvar\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add bcryptjs
 
 PATH: 
   C:\Users\edvar\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\edvar\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\Arquivos de Programas\Process Lasso;D:\NodeJS;C:\MinGW\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\edvar\AppData\Local\activestate\cache\bin;C:\Users\edvar\AppData\Local\ActiveState\StateTool\release\bin;C:\Users\edvar\AppData\Local\Microsoft\WindowsApps;C:\Users\edvar\AppData\Roaming\npm;C:\MinGW\bin;C:\Users\edvar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -14,17 +14,8 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fjoin: Not found
-      at Request.params.callback [as _callback] (C:\Users\edvar\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66145:18)
-      at Request.self.callback (C:\Users\edvar\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140890:22)
-      at Request.emit (node:events:390:28)
-      at Request.<anonymous> (C:\Users\edvar\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141862:10)
-      at Request.emit (node:events:390:28)
-      at IncomingMessage.<anonymous> (C:\Users\edvar\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141784:12)
-      at Object.onceWrapper (node:events:509:28)
-      at IncomingMessage.emit (node:events:402:35)
-      at endReadableNT (node:internal/streams/readable:1343:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
 
 npm manifest: 
   {
@@ -41,6 +32,7 @@ npm manifest:
     "devDependencies": {
       "@types/cors": "^2.8.12",
       "@types/express": "^4.17.14",
+      "@types/joi": "^17.2.3",
       "@types/node": "^18.11.5",
       "@typescript-eslint/eslint-plugin": "^5.41.0",
       "@typescript-eslint/parser": "^5.41.0",
@@ -243,6 +235,13 @@ Lockfile:
       "@types/express-serve-static-core" "^4.17.18"
       "@types/qs" "*"
       "@types/serve-static" "*"
+  
+  "@types/joi@^17.2.3":
+    version "17.2.3"
+    resolved "https://registry.yarnpkg.com/@types/joi/-/joi-17.2.3.tgz#b7768ed9d84f1ebd393328b9f97c1cf3d2b94798"
+    integrity sha512-dGjs/lhrWOa+eO0HwgxCSnDm5eMGCsXuvLglMghJq32F6q5LyyNuXb41DHzrg501CKNOSSAHmfB7FDGeUnDmzw==
+    dependencies:
+      joi "*"
   
   "@types/json-schema@^7.0.9":
     version "7.0.11"
@@ -1279,7 +1278,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
     integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
   
-  joi@17.x.x:
+  joi@*, joi@17.x.x:
     version "17.7.0"
     resolved "https://registry.yarnpkg.com/joi/-/joi-17.7.0.tgz#591a33b1fe1aca2bc27f290bcad9b9c1c570a6b3"
     integrity sha512-1/ugc8djfn93rTE3WRKdCzGGt/EtiYKxITMO4Wiv6q5JL1gl9ePt4kBsl1S499nbosspfctIQTpYIhSmHA3WAg==
